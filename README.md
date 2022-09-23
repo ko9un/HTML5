@@ -8,5 +8,5 @@
 'JavaScript'
 ```
 
-히선이 바보<p>
-[자바스크립트를 이용한 메세지출력](/helloworld/README.md)
+
+[자바스크립트를 이용한 메세지출력](/javascript_example/README.md)
