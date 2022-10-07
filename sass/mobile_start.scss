@@ -1,0 +1,134 @@
+$primary-color: #222;
+
+@mixin center($color) {
+    color: $color;
+    text-align: center;
+    
+}
+
+@mixin hidden{
+    display: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* 공통 구성 */
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* 헤더 구성 */
+
+#main-header {
+    padding: 10px 5px;
+    h1 {
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 27px;
+        color: $primary-color;
+    }
+    ul {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    li a {
+        color: #555;
+    }
+    label {
+        @include center($primary-color);
+        float: right;
+        width: 40px;
+        height: 27px;
+        line-height: 27px;
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+    }
+}
+
+#checkbox {
+   @include hidden;
+}
+
+#checkbox+nav {
+    display: block;
+}
+
+#checkbox:checked+nav {
+    @include hidden;
+}
+
+/* 본문과 푸터 구성 */
+#main-content {
+    background: #00afa0;
+    padding: 40px 15px 30px;
+
+    h1 {
+        margin-bottom: 20px;
+        font-weight: 500;
+        @include center(white);
+    }
+
+    p {
+        color: $primary-color;
+        @include center(white);
+    }
+}
+
+#sub-content {
+    padding-top: 30px;
+
+    h1 h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    p {
+        color: #555;
+    }
+
+    img {
+        width: 200px;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+#main-footer {
+    padding-top: 40px;
+}
+
+footer {
+    background: #323232;
+    font-size: 12px;
+    line-height: 40px;
+    @include center(white);
+}
